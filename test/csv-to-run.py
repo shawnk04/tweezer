@@ -146,7 +146,6 @@ def checked_run(args):
         return res
     except Exception as e:
         cleanup()
-        ping()
         return 1
 
 def is_sgx(config):
@@ -186,5 +185,3 @@ if __name__ == '__main__':
 
     for c in config:
         run_one_config(c)
-
-    ping()
